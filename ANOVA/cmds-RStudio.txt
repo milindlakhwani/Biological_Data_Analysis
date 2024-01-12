@@ -1,0 +1,9 @@
+> Data = read.table(file.choose(), header=TRUE, sep="\t")
+> Data
+> stackedData = stack(Data)
+> stackedData
+> result <- aov(values~ind, data=stackedData)
+> result
+> summary.aov(result)
+> TukeyHSD(result)
+> boxplot(Data)
